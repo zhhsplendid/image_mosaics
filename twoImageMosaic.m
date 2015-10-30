@@ -18,7 +18,7 @@ function [outputImage, warpedImage, h] = twoImageMosaic(imageDirName1, imageDirN
     end
     
     if autoMatch
-        [corresPoints1, corresPoints2] = autoCorresp(utTower1, utTower2);
+        [corresPoints1, corresPoints2] = autoCorresp(utTower1, utTower2)
     else
         [corresPoints1, corresPoints2] = manualCorresp(utTower1, utTower2);
     end
@@ -26,7 +26,7 @@ function [outputImage, warpedImage, h] = twoImageMosaic(imageDirName1, imageDirN
     if useRansac
         h = ransac(corresPoints1, corresPoints2);
     else
-        h = homography(corresPoints1, corresPoints2);
+        h = homography(corresPoints1, corresPoints2)
     end
     [ warpedImage, minRow, minCol, oriXY] = warpImage( utTower1, h );
     figure;
