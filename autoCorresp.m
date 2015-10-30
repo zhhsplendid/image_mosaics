@@ -7,7 +7,7 @@ function [ corresPoints1, corresPoints2] = autoCorresp(image1, image2)
   % manually click 
   
   %TODO
-    EUCLIDEAN_DIS_THRES = Inf;
+    EUCLIDEAN_DIS_THRES = 1500; %2000, 1500
     %[row1, col1, channel1] = size(image1)
     %[row2, col2, channel2] = size(image2)
     simage1 = single(rgb2gray(image1));
