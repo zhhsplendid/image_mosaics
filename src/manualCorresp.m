@@ -3,8 +3,8 @@ function [corresPoints1, corresPoints2] = manualCorresp(utTower1, utTower2);
   % corresPoints1 and 2 are N*2 matrices. First column and second column
   % represent x and y values in image of matlab
   
-  % This function needs manually click, you should click one point on left
-  % image (image1), and then click one corresponding point on right image 
+  % This function needs manually click, you should click one point in left
+  % image (image1), and then click one corresponding point in right image 
   % (image2). Click points one by one.
   
   %TODO
@@ -14,6 +14,7 @@ function [corresPoints1, corresPoints2] = manualCorresp(utTower1, utTower2);
   
   subplot(1, 2, 2);
   imshow(utTower2);
+  title('click one point in left image, then corresponding point in right image, then next pair');
   
   points = ginput(); % size of points: (2N) * 2
   N2 = size(points, 1);

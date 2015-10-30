@@ -26,7 +26,7 @@ function [outputImage, warpedImage, h] = twoImageMosaic(imageDirName1, imageDirN
     if useRansac
         h = ransac(corresPoints1, corresPoints2);
     else
-        h = homography(corresPoints1, corresPoints2)
+        h = homography(corresPoints1, corresPoints2);
     end
     [ warpedImage, minRow, minCol, oriXY] = warpImage( utTower1, h );
     figure;

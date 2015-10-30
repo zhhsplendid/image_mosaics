@@ -1,0 +1,35 @@
+function [ rectImage, h ] = rectify( imageDirName)
+  
+  N = 100;
+  [row, col, channel] = size(imageDirName);
+  rectImage = uint8(zeros(N, N, channel));
+  
+  image = imread(imageDirName);
+  figure;
+  imshow(image);
+  title('Please click four corners');
+  
+  corresPoints1 = ginput();
+  corresPoints2 = [0,0; 0,N; N,0; N,N];
+  
+  h = homography(corresPoints1, corresPoints2)
+  
+  [warpedImage, minRow, minCol, oriXY] = warpImage( image, h );
+  rowOffset = 1 - min(1, minRow);
+  colOffset = 1 - min(1, minCol);
+  
+   
+  n = size(oriXY, 2);
+  size(rect
+  for j = 1:n
+    if oriXY(2, j) >= 1 && oriXY(2, j) <= 100 && oriXY(1, j) >= 1 && oriXY(1, j) <= 100
+      rectImage(oriXY(2, j), oriXY(1, j), :) = warpedImage(oriXY(2, j) + rowOffset, oriXY(1, j) + colOffset, :);
+    end
+  end
+  
+  
+  figure;
+  imshow(rectImage);
+  title('rectified image');
+end
+

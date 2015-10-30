@@ -40,40 +40,11 @@ function [ outputImage, minRow, minCol, oriXY] = warpImage( inputImage, h )
     invIndex = zeros(2, total);
     invIndex(1,:) = p(1,:) ./ p(3, :);
     invIndex(2,:) = p(2,:) ./ p(3, :);
-    %{
-    leftEquation = crIndex - repmat(h(1:2, 3), 1, total);
-    matrices = repmat(h(1:2, 1:2), 1, total);
-    repeated = reshape(repmat(crIndex, 2, 1), 2, total * 2);
-    mask = repmat(h(3,1:2), 2, total);
-    toInv = matrices - (mask .* repeated);
-    
-    cellToInv = mat2cell(toInv, 2, 2 * ones(1, total));
-    cellLeft = mat2cell(leftEquation, 2, ones(1, total));
-    cellResult = cellfun(@mldivide, cellToInv, cellLeft, 'UniformOutput', false);
-    invIndex = cell2mat(cellResult);
-    %}
     
     toKeep = invIndex(1,:) >= 1 & invIndex(1,:) <= col & invIndex(2,:) >= 1 & invIndex(2,:) <= row;
     invXY = invIndex(1:2, toKeep);
     oriXY = crIndex(1:2, toKeep);
-    %{
-    invX = [];
-    oriX = [];
-    invY = [];
-    oriY = [];
-    for r = max(0, minRow): (maxRow + minRow)
-        r
-        for c = max(0, minCol): (maxCol + minCol)
-            [invC, invR] = homographyTrans(c, r, invH);
-            if invC >= 1 && invC <= col && invR >= 0 && invR <= row
-                invX = [invX, invC];
-                oriX = [oriX, c];
-                invY = [invY, invR];
-                oriY = [oriY, r];
-            end
-        end
-    end
-    %}
+    
     n = size(invXY, 2);
     colorValues = zeros(1, n, channels);
     for i = 1:channels
