@@ -17,8 +17,8 @@ function [corresPoints1, corresPoints2] = manualCorresp(utTower1, utTower2);
   
   points = ginput(); % size of points: (2N) * 2
   N2 = size(points, 1);
-  corresPoints1 = points(mod(1:N2,2) == 1, :) % all odd indices 
-  corresPoints2 = points(mod(1:N2,2) == 0, :) % all even indices 
+  corresPoints1 = points(mod(1:N2,2) == 1, :); % all odd indices 
+  corresPoints2 = points(mod(1:N2,2) == 0, :); % all even indices 
   
 end
 

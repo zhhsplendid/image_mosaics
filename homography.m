@@ -11,8 +11,8 @@ function [ h ] = homography( corresPoints1, corresPoints2 )
   
   % Let q = [a, b, c, d, e, f, g, h]';
   % We just need to find least squares solution of q in equation:
-  % [x, y, 1, 0, 0, 0, xx', yx';       [x';
-  %  0, 0, 0, x, y, 1, xy', yy'] * q =  y']
+  % [x, y, 1, 0, 0, 0, -xx', -yx';       [x';
+  %  0, 0, 0, x, y, 1, -xy', -yy'] * q =  y']
   % In following code, we try to find least squares of Aq - B as stated.
   
   n = size(corresPoints1, 1);
@@ -24,8 +24,8 @@ function [ h ] = homography( corresPoints1, corresPoints2 )
   A(1:n, 3) = ones(n, 1);
   A(n+1: 2*n, 4:5) = corresPoints1;
   A(n+1: 2*n, 6) = ones(n, 1);
-  A(:,7) = B .* [corresPoints1(:, 1); corresPoints1(:, 1)];
-  A(:,8) = B .* [corresPoints1(:, 2); corresPoints1(:, 2)];
+  A(:,7) = -B .* [corresPoints1(:, 1); corresPoints1(:, 1)];
+  A(:,8) = -B .* [corresPoints1(:, 2); corresPoints1(:, 2)];
   
   q = A \ B; % size(q) = [8, 1];
   h = reshape([q; 1], 3, 3)';

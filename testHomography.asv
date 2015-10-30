@@ -1,0 +1,30 @@
+function [tf] = testHomography(  )
+    
+    h = rand(3, 3);
+    h(3, 3) = 1;
+    h
+    
+    n = 4;
+    p1 = rand(n, 2);
+    pp1 = [p1, ones(n, 1)]';
+    pp2 = h * pp1;
+    
+    p2 = zeros(n, 2);
+    p2(:,1) = (pp2(1,:) ./ pp2(3,:))';
+    p2(:,2) = (pp2(2,:) ./ pp2(3,:))';
+    
+    h2 = homography(p1, p2)
+    
+    if h ~= h2
+        tf = false;
+    else
+        tf = true;
+    end
+    
+    pp2 = [p2; zeros(1, n)];
+    pp1 = h \ pp2;
+    cmp
+    cmpP1 = (pp2(1,:) ./ pp2(3,:))';
+    cmpP1 = (pp2(2,:) ./ pp2(3,:))';
+end
+
