@@ -2,9 +2,10 @@ function [ h ] = ransac(  corresPoints1, corresPoints2)
   % This function implements ransac for homography
   n = size(corresPoints1, 1);
   REPEAT_TIME = n / 4;
+  
   CHOOSE_FRACTION = 0.6;
   NUMBER_PAIRS = 4; % At least 4 points can we get a homography
-  DISTANCE_THRESHOLD = 1000000;
+  DISTANCE_THRESHOLD = 200000;
   INLINE_THRESHOLD = round(n * CHOOSE_FRACTION);
     
   bestError = Inf;
@@ -22,11 +23,14 @@ function [ h ] = ransac(  corresPoints1, corresPoints2)
     p2(:,2) = (wp2(2,:) ./ wp2(3,:))';
     
     euclideanDistSqur = sum( ((corresPoints1 - p2) .^ 2), 2); %size = n * 1
-    inlineNumber = sum(euclideanDistSqur < DISTANCE_THRESHOLD);
+    chooseIndex = euclideanDistSqur < DISTANCE_THRESHOLD;
+    inlineNumber = sum(chooseIndex);
     if inlineNumber > INLINE_THRESHOLD
-      error = sum(euclideanDistSqur(euclideanDistSqur < DISTANCE_THRESHOLD)) / inlineNumber;
+      error = sum(euclideanDistSqur(chooseIndex)) / inlineNumber;
       if error < bestError
-        h = maybeModel;
+        modelPara1 = corresPoints1(chooseIndex, :);
+        modelPara2 = corresPoints2(chooseIndex, :);
+        h = homography(modelPara1, modelPara2);
         bestError = error;
       end
     end

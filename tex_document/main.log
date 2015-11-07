@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.22)  30 OCT 2015 17:06
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.22)  30 OCT 2015 23:35
 entering extended mode
 **C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A3/image_mosa
 ics/tex_document/main.tex
@@ -215,24 +215,173 @@ LaTeX Font Info:    ... okay on input line 54.
 \MPnumerator=\count120
 \makeMPintoPDFobject=\count121
 \everyMPtoPDFconversion=\toks25
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 75.
+ (C:\CTEX\MiKTeX\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 80.
+
+(C:\CTEX\MiKTeX\tex\latex\base\ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
+
+(C:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
+
+(C:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
 {C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}]
+<mosaic1.jpg, id=13, 1258.7025pt x 621.32124pt>
+File: mosaic1.jpg Graphic file (type jpg)
+ <use mosaic1.jpg>
+Package pdftex.def Info: mosaic1.jpg used on input line 137.
+(pdftex.def)             Requested size: 520.34267pt x 256.84805pt.
+
+Overfull \hbox (86.72267pt too wide) in paragraph at lines 137--138
+[][] 
+ []
+
+<myroom1.jpg, id=14, 642.4pt x 481.8pt>
+File: myroom1.jpg Graphic file (type jpg)
+ <use myroom1.jpg>
+Package pdftex.def Info: myroom1.jpg used on input line 144.
+(pdftex.def)             Requested size: 346.89731pt x 260.17546pt.
+
+<myroom2.jpg, id=15, 642.4pt x 481.8pt>
+File: myroom2.jpg Graphic file (type jpg)
+ <use myroom2.jpg>
+Package pdftex.def Info: myroom2.jpg used on input line 145.
+(pdftex.def)             Requested size: 346.89731pt x 260.17546pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
+[][]
+ []
+
+<myroom3.jpg, id=16, 446.41782pt x 409.53pt>
+File: myroom3.jpg Graphic file (type jpg)
+ <use myroom3.jpg>
+Package pdftex.def Info: myroom3.jpg used on input line 153.
+(pdftex.def)             Requested size: 346.89731pt x 318.23856pt.
+
+<doesntWork.jpg, id=17, 589.20125pt x 726.715pt>
+File: doesntWork.jpg Graphic file (type jpg)
+ <use doesntWork.jpg>
+Package pdftex.def Info: doesntWork.jpg used on input line 161.
+(pdftex.def)             Requested size: 346.89731pt x 427.85994pt.
+ [2]
+<KristenClass.jpg, id=23, 1284.8pt x 963.6pt>
+File: KristenClass.jpg Graphic file (type jpg)
+ <use KristenClass.jpg>
+Package pdftex.def Info: KristenClass.jpg used on input line 169.
+(pdftex.def)             Requested size: 346.89731pt x 260.17548pt.
+
+<meHuihuangZheng.jpg, id=24, 963.6pt x 1284.8pt>
+File: meHuihuangZheng.jpg Graphic file (type jpg)
+ <use meHuihuangZheng.jpg>
+Package pdftex.def Info: meHuihuangZheng.jpg used on input line 170.
+(pdftex.def)             Requested size: 260.17464pt x 346.90063pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--171
+[][]
+ []
+
+<KristenAndMe.jpg, id=25, 389.0535pt x 292.6935pt>
+File: KristenAndMe.jpg Graphic file (type jpg)
+ <use KristenAndMe.jpg>
+Package pdftex.def Info: KristenAndMe.jpg used on input line 176.
+(pdftex.def)             Requested size: 476.98463pt x 358.86307pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 176--177
+[][] 
+ []
+
+<badexample.jpg, id=26, 869.2475pt x 600.2425pt>
+File: badexample.jpg Graphic file (type jpg)
+ <use badexample.jpg>
+Package pdftex.def Info: badexample.jpg used on input line 185.
+(pdftex.def)             Requested size: 476.98463pt x 329.37419pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 185--186
+[][] 
+ []
+
+[3 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A3/image_mo
+saics/tex_document/mosaic1.jpg>] [4 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/Co
+mputerVision/homework/A3/image_mosaics/tex_document/myroom1.jpg> <C:/Users/zhhs
+p/Desktop/UTexas/UTCourses/ComputerVision/homework/A3/image_mosaics/tex_documen
+t/myroom2.jpg>] [5 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/home
+work/A3/image_mosaics/tex_document/myroom3.jpg>] [6 <C:/Users/zhhsp/Desktop/UTe
+xas/UTCourses/ComputerVision/homework/A3/image_mosaics/tex_document/doesntWork.
+jpg>] [7 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A3/im
+age_mosaics/tex_document/KristenClass.jpg> <C:/Users/zhhsp/Desktop/UTexas/UTCou
+rses/ComputerVision/homework/A3/image_mosaics/tex_document/meHuihuangZheng.jpg>
+] [8 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A3/image_
+mosaics/tex_document/KristenAndMe.jpg>]
+<ransac.jpg, id=46, 1385.175pt x 618.31pt>
+File: ransac.jpg Graphic file (type jpg)
+ <use ransac.jpg>
+Package pdftex.def Info: ransac.jpg used on input line 191.
+(pdftex.def)             Requested size: 476.98463pt x 212.91148pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 191--192
+[][] 
+ []
+
+<uttower1.jpg, id=47, 770.88pt x 514.17094pt>
+File: uttower1.jpg Graphic file (type jpg)
+ <use uttower1.jpg>
+Package pdftex.def Info: uttower1.jpg used on input line 200.
+(pdftex.def)             Requested size: 476.98463pt x 318.13936pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 200--201
+[][] 
+ []
+
+<rectified.jpg, id=48, 566.115pt x 487.8225pt>
+File: rectified.jpg Graphic file (type jpg)
+ <use rectified.jpg>
+Package pdftex.def Info: rectified.jpg used on input line 206.
+(pdftex.def)             Requested size: 476.98463pt x 411.02606pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 206--207
+[][] 
+ []
+
+[9 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A3/image_mo
+saics/tex_document/badexample.jpg>] [10 <C:/Users/zhhsp/Desktop/UTexas/UTCourse
+s/ComputerVision/homework/A3/image_mosaics/tex_document/ransac.jpg> <C:/Users/z
+hhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A3/image_mosaics/tex_docu
+ment/uttower1.jpg>] [11 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision
+/homework/A3/image_mosaics/tex_document/rectified.jpg>]
 (C:\Users\zhhsp\Desktop\UTexas\UTCourses\ComputerVision\homework\A3\image_mosai
 cs\tex_document\main.aux) ) 
 Here is how much of TeX's memory you used:
- 2657 strings out of 495354
- 33162 string characters out of 3183859
- 86252 words of memory out of 3000000
- 5823 multiletter control sequences out of 15000+200000
- 5151 words of font info for 19 fonts, out of 3000000 for 9000
+ 2808 strings out of 495354
+ 35526 string characters out of 3183859
+ 92336 words of memory out of 3000000
+ 5932 multiletter control sequences out of 15000+200000
+ 11076 words of font info for 43 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 27i,5n,24p,379b,125s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,7n,24p,770b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on main.pdf (1 page, 28543 bytes).
+0.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
+<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (11 pages, 1591415 bytes).
 PDF statistics:
- 14 PDF objects out of 1000 (max. 8388607)
+ 90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,7 +7,7 @@ function [ corresPoints1, corresPoints2] = autoCorresp(image1, image2)
   % manually click 
   
   %TODO
-    EUCLIDEAN_DIS_THRES = 1500; %2000, 1500
+    EUCLIDEAN_DIS_THRES = Inf; %2000, 1500
     %[row1, col1, channel1] = size(image1)
     %[row2, col2, channel2] = size(image2)
     simage1 = single(rgb2gray(image1));
@@ -17,7 +17,7 @@ function [ corresPoints1, corresPoints2] = autoCorresp(image1, image2)
     [matches, scores] = vl_ubcmatch(descriptor1, descriptor2, 10);
     %[matches, scores] = matchFeatures(feature1, feature2, 'Unique', true);
     matches = matches(:,scores < EUCLIDEAN_DIS_THRES);
-    matches
+    %matches
     corresPoints1 = [feature1(1, matches(1,:)) ; feature1(2, matches(1,:)) ]';
     corresPoints2 = [feature2(1, matches(2,:)) ; feature2(2, matches(2,:)) ]';
     %size(corresPoints1)

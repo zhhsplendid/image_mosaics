@@ -9,12 +9,14 @@ function [corresPoints1, corresPoints2] = manualCorresp(utTower1, utTower2);
   
   %TODO
   figure;
+
   subplot(1, 2, 1);
   imshow(utTower1);
   
+  title('click one point in left image, then corresponding point in right image, then next pair. Press Enter when you finish.');
+  
   subplot(1, 2, 2);
   imshow(utTower2);
-  title('click one point in left image, then corresponding point in right image, then next pair');
   
   points = ginput(); % size of points: (2N) * 2
   N2 = size(points, 1);

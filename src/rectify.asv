@@ -1,13 +1,18 @@
 function [ rectImage, h ] = rectify( imageDirName)
+  % Rectify takes input image, then user chooses 4 points in the imags
+  % by clicking four corners points, order: top left, bottom left, top right, bottom
+  % right. Then press Enter. The output image is square picture. h is the homography when transform 
   
-  N = 100;
-  [row, col, channel] = size(imageDirName);
+  
+  N = 400;
+  image = imread(imageDirName);
+  [row, col, channel] = size(image);
   rectImage = uint8(zeros(N, N, channel));
   
-  image = imread(imageDirName);
+  
   figure;
   imshow(image);
-  title('Please click four corners');
+  title('Please click four corners, order: top left, bottom left, top right, bottom right. Then press Enter');
   
   corresPoints1 = ginput();
   corresPoints2 = [0,0; 0,N; N,0; N,N];
@@ -18,16 +23,14 @@ function [ rectImage, h ] = rectify( imageDirName)
   rowOffset = 1 - min(1, minRow);
   colOffset = 1 - min(1, minCol);
   
-   
+  toKeep = oriXY(1,:) >= 1 & oriXY(1,:) <= N & oriXY(2, :) >= 1 & oriXY(2,:) <= N;
+  oriXY = oriXY(:,toKeep);
   n = size(oriXY, 2);
-  size(rect
+  
   for j = 1:n
-    if oriXY(2, j) >= 1 && oriXY(2, j) <= 100 && oriXY(1, j) >= 1 && oriXY(1, j) <= 100
-      rectImage(oriXY(2, j), oriXY(1, j), :) = warpedImage(oriXY(2, j) + rowOffset, oriXY(1, j) + colOffset, :);
-    end
+    rectImage(oriXY(2, j), oriXY(1, j), :) = warpedImage(oriXY(2, j) + rowOffset, oriXY(1, j) + colOffset, :);
   end
-  
-  
+ 
   figure;
   imshow(rectImage);
   title('rectified image');

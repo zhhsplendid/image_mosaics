@@ -1,4 +1,8 @@
 function [ rectImage, h ] = rectify( imageDirName)
+  % Rectify takes input image, then user chooses 4 points in the imags
+  % by click four corners order: top left, bottom left, top right, bottom
+  % right. Then press Enter. The output image is square picture. h is the homography when transform 
+  
   
   N = 400;
   image = imread(imageDirName);
@@ -8,7 +12,7 @@ function [ rectImage, h ] = rectify( imageDirName)
   
   figure;
   imshow(image);
-  title('Please click four corners, order: top left, bottom left, top right, bottom right');
+  title('Please click four corners, order: top left, bottom left, top right, bottom right. Then press Enter');
   
   corresPoints1 = ginput();
   corresPoints2 = [0,0; 0,N; N,0; N,N];
