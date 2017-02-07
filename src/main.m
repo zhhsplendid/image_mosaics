@@ -13,23 +13,23 @@ function main( )
     twoImageMosaic('input_images/utTower1.JPG', 'input_images/utTower2.JPG', AUTO_MATCH, ~RANSAC);
     
     % Question 2, add own example
-    twoImageMosaic('input_images/myroom1.JPG', 'input_images/myroom2.JPG', AUTO_MATCH, ~RANSAC);
+    %twoImageMosaic('input_images/myroom1.JPG', 'input_images/myroom2.JPG', AUTO_MATCH, ~RANSAC);
     
     % Question 3, 
     % TODO question 3, you need go to line 17 in autoCorresp.m, change the
     % third parameter to small value. Then you can see automatical matching
     % doesn't work.
-    twoImageMosaic('input_images/utTower1.JPG', 'input_images/utTower2.JPG', AUTO_MATCH, ~RANSAC);
+    %twoImageMosaic('input_images/utTower1.JPG', 'input_images/utTower2.JPG', AUTO_MATCH, ~RANSAC);
     
     % Question 4,
-    twoImageMosaic('input_images/meHuihuangZheng.JPG', 'input_images/KristenClass.JPG', ~AUTO_MATCH, ~RANSAC);
+    %twoImageMosaic('input_images/meHuihuangZheng.JPG', 'input_images/KristenClass.JPG', ~AUTO_MATCH, ~RANSAC);
     
     % Extra Credit
     % RANSAC
-    twoImageMosaic('input_images/utTower1.JPG', 'input_images/utTower2.JPG', AUTO_MATCH, RANSAC);
+    %twoImageMosaic('input_images/utTower1.JPG', 'input_images/utTower2.JPG', AUTO_MATCH, RANSAC);
     
     % Rectify
-    rectify('input_images/utTower1.JPG');
+    %rectify('input_images/utTower1.JPG');
     
 end
 

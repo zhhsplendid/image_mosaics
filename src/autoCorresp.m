@@ -15,6 +15,10 @@ function [ corresPoints1, corresPoints2] = autoCorresp(image1, image2)
     [feature1, descriptor1] = vl_sift(simage1) ;
     [feature2, descriptor2] = vl_sift(simage2) ;
     [matches, scores] = vl_ubcmatch(descriptor1, descriptor2, 10);
+    size(descriptor1)
+    size(descriptor1)
+    size(matches)
+    matches(:, 1:8)
     %[matches, scores] = matchFeatures(feature1, feature2, 'Unique', true);
     matches = matches(:,scores < EUCLIDEAN_DIS_THRES);
     %matches
